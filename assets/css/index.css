@@ -49,6 +49,7 @@ nav{
     padding-bottom:100px;
     position: relative;
 }
+
 .row{
     display:block;
     margin-top:25px;
@@ -78,6 +79,9 @@ nav{
 .col-12{ 
     flex: 1 100%;
     margin:0 0 3.5em 0;
+}
+.bg-grey{
+    background-color: rgba(128,128,128,0.6);
 }
 .left{
     position: absolute;
@@ -123,6 +127,29 @@ section p{
     text-align: center;
     width:100%;
     color:#777;
+}
+section ul{
+
+}
+section li{
+    color:#777;
+    font-size:1.6em;
+    margin:0.5em 0;
+}
+section a{
+    transition:all 0.3s;
+}
+section a:hover{
+    color:#d95000;
+}
+section a i{
+    transition: all 0.3s;
+    box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.5);
+}
+section a:hover i{
+    background-color:#d95000;
+    transform:translate(2px,2px);
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.5);
 }
     .container::after{
         content:"";
@@ -187,13 +214,40 @@ a.button{
     transition: all 0.3s;
     box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
 }
-    a.button:hover{
+.button{
+    padding:18px 35px;
+    color:#ddd;
+    font-size:0.9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:3px;
+    background-color: #d95000;
+    opacity:0.9;
+    transition: all 0.3s;
+    box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+    border:none; 
+}
+    .button:hover{
         opacity:0.8;
     }
     a.icon i{
         margin-right:1em;
         color:#ccc;
         opacity:0.9;
+    }
+    .icon i{
+        margin-right:1em;
+        color:#ccc;
+        opacity:0.9;
+    }
+    .icon-inverse i{
+        margin-right:1em;
+        color:white;
+        background-color: #ccc;
+        padding:10px;
+    }
+    .rounded i{
+        border-radius:50%;
     }
 
 
@@ -295,4 +349,119 @@ a.button{
     .activity-item:hover h3{
         color:#d95000 !important;
     }
-/* FOOTER */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:15px;
+    }
+      
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+      
+      .content-container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      
+      .content-container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+      .left-content {
+        left: -81px;
+      }
+      
+      .right-content {
+        left: 50%;
+      }
+      
+      .left-content::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+      }
+      
+      .right-content::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+      
+      .right-content::after {
+        left: -16px;
+      }
+      
+      .content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+      }
+      
+      /* Fix for timeline */
+      @media screen and (max-width: 600px) {
+        .timeline::after {
+          left: 31px;
+        }
+      
+        .content-container {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+      
+        .content-container::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+      
+        .left-content::after, .right-content::after {
+          left: 15px;
+        }
+        .left-content{
+            left:-1px;
+        }
+      
+        .right-content {
+          left: 0%;
+        }
+
+
+    }
